@@ -1,0 +1,370 @@
+{
+	"variables": [],
+	"info": {
+		"name": "product-service-api-collection",
+		"_postman_id": "ae320d6f-e7ee-08e6-7979-d5a0854a547e",
+		"description": "product-service-api-collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-All-Products",
+			"request": {
+				"url": "http://localhost:8080/product",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get All Products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products when type = subscription",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "subscription",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products when type = phone",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=phone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "phone",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products when type is phone and city",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=phone&city=Stockholm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "phone",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "city",
+							"value": "Stockholm",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products when type is 'subscription' and city",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=subscription&city=Malmö",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "subscription",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "city",
+							"value": "Malmö",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products  by min-price and max-price",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?min-price=300&max-price=600",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "min-price",
+							"value": "300",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "max-price",
+							"value": "600",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products by type,min-price and max-price",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=phone&min-price=300&max-price=900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "phone",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "min-price",
+							"value": "300",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "max-price",
+							"value": "900",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products by type,min-price ",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?min-price=900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "min-price",
+							"value": "900",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All products by type & color",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=phone&color=rosa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "phone",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "color",
+							"value": "rosa",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products by GB limit",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?type=subscription&gb-limit-min=20&gb-limit-max=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "subscription",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "gb-limit-min",
+							"value": "20",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "gb-limit-max",
+							"value": "50",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products by GB limit maximum",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/product?gb-limit-max=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "gb-limit-max",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

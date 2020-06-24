@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+	<changeSet id="product-table-creation" author="telnor">
+		<validCheckSum>ANY</validCheckSum>
+		<preConditions onFail="MARK_RAN">
+        <not>
+            <tableExists tableName="product"/>
+        </not>
+		</preConditions>
+		<createTable tableName="product">
+			<column name="id" autoIncrement="true" type="BIGINT">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="product_type" type="varchar(50)">
+				<constraints nullable="true" />
+			</column>
+			<column name="gb_limit" type="BIGINT">
+				<constraints nullable="true" />
+			</column>
+			<column name="color" type="varchar(20)">
+				<constraints nullable="true" />
+			</column>
+			<column name="price" type="double">
+				<constraints nullable="true" />
+			</column>
+			<column name="address" type="varchar(50)">
+				<constraints nullable="true" />
+			</column>
+
+		</createTable>
+	</changeSet>
+	
+	<changeSet id="product-table-insert" author="telnor">
+		<loadData encoding="UTF-8" file="db/data/data.csv"
+			separator="," tableName="product" />
+	</changeSet>
+
+
+</databaseChangeLog> 
+
